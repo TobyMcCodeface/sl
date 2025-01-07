@@ -87,7 +87,7 @@
                 const departures = data.Departure.filter(dep => {
                     const departureTime = new Date(dep.date + "T" + dep.time);
                     const minutesLeft = Math.floor((departureTime - now) / 60000);
-                    return minutesLeft >= 8 && minutesLeft <= 30 && dep.directionFlag == "2" && dep.direction.includes("T-bana");
+                    return minutesLeft >= 8 && minutesLeft <= 20 && dep.directionFlag == "2" && dep.direction.includes("T-bana");
                 });
                 
                 if (departures.length === 0) {
